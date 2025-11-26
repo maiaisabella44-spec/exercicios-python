@@ -1,0 +1,4 @@
+def f(lista, busca):
+    for numero, nome in lista:
+        if numero == busca:
+            return nome
