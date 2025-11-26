@@ -1,0 +1,12 @@
+def f(prices):
+    if not prices:
+        return 0
+
+    min_preco = prices[0]
+    lucro_max = 0
+
+    for preco in prices[1:]:
+        lucro_max = max(lucro_max, preco - min_preco)
+        min_preco = min(min_preco, preco)
+
+    return lucro_max
