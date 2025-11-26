@@ -1,0 +1,10 @@
+def f(nums):
+    total_produto = 1
+    for num in nums:
+        total_produto *= num
+    
+    output = []
+    for num in nums:
+        output.append(total_produto // num)
+    
+    return output
