@@ -1,0 +1,6 @@
+def f(x, y):
+    resultado = []
+    for i in range(len(x)):
+        resultado.append(x[i])
+        resultado.append(y[i])
+    return resultado
