@@ -1,0 +1,12 @@
+def f(x, y):
+    n = len(x)
+    media_x = sum(x) / n
+    media_y = sum(y) / n
+    
+    numerador = sum((x[i] - media_x) * (y[i] - media_y) for i in range(n))
+    denominador = sum((x[i] - media_x) ** 2 for i in range(n))
+    
+    beta1 = numerador / denominador
+    beta0 = media_y - beta1 * media_x
+    
+    return [beta0, beta1]
