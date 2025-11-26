@@ -1,0 +1,19 @@
+def f(x):
+    resultados = []
+    
+    def dfs(expr, pos):
+        if pos == 9:
+            if eval(expr) == x:
+                resultados.append(expr + "==" + str(x))
+            return
+        # próxima posição de número
+        next_num = str(pos + 1)
+        # opção 1: adicionar '+'
+        dfs(expr + "+" + next_num, pos + 1)
+        # opção 2: adicionar '-'
+        dfs(expr + "-" + next_num, pos + 1)
+        # opção 3: concatenar (sem operador)
+        dfs(expr + next_num, pos + 1)
+    
+    dfs("1", 1)  # começamos com '1' já colocado
+    return resultados
