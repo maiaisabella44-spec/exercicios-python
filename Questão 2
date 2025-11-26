@@ -1,0 +1,12 @@
+def f(nums):
+    n = len(nums)
+    repetido = None
+    faltando = None
+    
+    for i in range(1, n + 1):
+        if nums.count(i) == 2:
+            repetido = i
+        elif nums.count(i) == 0:
+            faltando = i
+            
+    return (repetido, faltando)
